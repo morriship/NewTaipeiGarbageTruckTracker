@@ -3,7 +3,7 @@
 
 ## Getting Started
 
-### prepare environment
+### Prepare Environment
 
 Install `sl` for receiving notification
 
@@ -19,7 +19,7 @@ pip3 install -r requirements.txt
 ```
 
 
-### run
+### Run
 
 list all arguments
 
