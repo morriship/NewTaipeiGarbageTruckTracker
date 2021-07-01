@@ -31,7 +31,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-s', '--street', type=str, help='sub-name of the street. this app notify user while rubbish truck arrives that street.')
     parser.add_argument('-l', '--line_id', type=str, help='line id')
-    parser.add_argument('-c', '--car', type=str, help='car name')
     args = parser.parse_args()
     while True:
         run(args)
