@@ -5,11 +5,11 @@ import subprocess
 
 import argparse
 
-import crawler
+from rubbish_truck import get_rubbish_trucks
 
 
 def run(args):
-    rubbish_trucks = crawler.get_rubbish_trucks()
+    rubbish_trucks = get_rubbish_trucks()
     for rubbish_truck in rubbish_trucks:
         if rubbish_truck.line_id == args.line_id:
             print('{}\t{}'.format(rubbish_truck.time, rubbish_truck.location))

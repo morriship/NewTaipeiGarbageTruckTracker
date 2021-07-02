@@ -1,4 +1,7 @@
+import json
 from typing import List
+
+import crawler
 
 
 class RubbishTruck:
@@ -34,3 +37,8 @@ def json_decoder(obj):
                             latitude=obj['latitude'],
                             city_id=obj['cityId'],
                             city_name=obj['cityName'])
+
+
+def get_rubbish_trucks() -> RubbishTrucks:
+    json_content = crawler.get_rubbish_trucks_json()
+    return json.loads(json_content, object_hook=json_decoder)
