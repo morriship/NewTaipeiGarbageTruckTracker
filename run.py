@@ -8,11 +8,14 @@ import argparse
 from rubbish_truck import get_rubbish_trucks
 
 
+QUERY_INTERVAL_SEC = 2 * 60
+
+
 def run(args):
     rubbish_trucks = get_rubbish_trucks()
     for rubbish_truck in rubbish_trucks:
         if rubbish_truck.line_id == args.line_id:
-            print('{}\t{}'.format(rubbish_truck.time, rubbish_truck.location))
+            print(rubbish_truck)
             if args.street is not None and rubbish_truck.on_street(args.street):
                 notify()
 
