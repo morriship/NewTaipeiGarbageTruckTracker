@@ -1,7 +1,7 @@
 import json
 from typing import List
 
-import crawler
+import fetcher
 
 
 class RubbishTruck:
@@ -40,5 +40,5 @@ def json_decoder(obj):
 
 
 def get_rubbish_trucks() -> RubbishTrucks:
-    json_content = crawler.get_rubbish_trucks_json()
+    json_content = fetcher.get_rubbish_trucks(fetcher.ContentJSON)
     return json.loads(json_content, object_hook=json_decoder)
